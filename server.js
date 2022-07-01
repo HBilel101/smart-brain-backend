@@ -26,8 +26,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.get('/',(req,res)=>{
-    postgres.select('*').from('users')
-    .then(data=>res.json(data));
+    res.json('it works')
 })
 app.post('/signin',(req,res)=>{
 signin.handleSignin(req,res,postgres,bcrypt);
@@ -44,6 +43,6 @@ app.put('/image',(req,res)=>{image.handleImage(req,res,postgres)
 app.post('/imageUrl',(req,res)=>{image.handleImageApi(req,res,postgres)
 })
 
-app.listen(3000,()=>{
-    console.log('app is running on port 3000');
+app.listen(process.env.PORT,()=>{
+    console.log(`app is running on port ${process.env.PORT}`);
 })
