@@ -14,10 +14,7 @@ const postgres = knex(
         client: 'pg',
         connection: {
           host : 'postgresql-cubic-76787',
-          port : 5432,
-          user : 'postgres',
-          password : '    ',
-          database : 'smart-brain'
+          ssl:true,
         }
     });
 
