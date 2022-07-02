@@ -6,7 +6,7 @@ const register = require('./handlers/register');
 const signin = require('./handlers/signin');
 const profile =require('./handlers/profile');
 const image = require('./handlers/image')
-
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0; 
 
 
 const postgres = knex(
