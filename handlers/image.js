@@ -1,6 +1,6 @@
 const clarifai = require('clarifai');
 const app = new Clarifai.App({
-    apiKey: '005b12b654744918baff2371600e75d0'
+    apiKey: process.env.API_CLARIFAI
    });
 
 const handleImageApi = (req,res,postgres)=>{
