@@ -13,7 +13,7 @@ const postgres = knex(
     {
         client: 'pg',
         connection: {
-          host : '127.0.0.1',
+          host : 'postgresql-cubic-76787',
           port : 5432,
           user : 'postgres',
           password : '    ',
@@ -43,6 +43,6 @@ app.put('/image',(req,res)=>{image.handleImage(req,res,postgres)
 app.post('/imageUrl',(req,res)=>{image.handleImageApi(req,res,postgres)
 })
 
-app.listen(process.env.PORT || 3000,()=>{
-    console.log(`app is running on port ${process.env.PORT}`);
+app.listen( 3000,()=>{
+    console.log(`app is running on port 3000`);
 })
